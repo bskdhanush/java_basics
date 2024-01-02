@@ -1,10 +1,9 @@
 import java.util.*;
 public class base {
-   public static int array[][]=new int[4][4];
+  
     public static void printArray(int array [][]){
         int n=array.length;
         int m=array[0].length;
-        System.out.println("The matrix:");
         for(int i=0;i<n;++i){
             for(int j=0;j<m;++j ){
                 System.out.print(array[i][j]+" ");
@@ -15,14 +14,13 @@ public class base {
 
     
 
-        public static int[][] inputArray(){
+        public static int[][] inputArray(int size){
             Scanner in=new Scanner(System.in);
-            int n=array.length;
-            int m=array[0].length;
+            int array[][]=new int[size][size];
           // To take input of array
             System.out.println("Enter values: ");
-            for(int i=0;i<n;++i){
-              for(int j=0;j<m;++j ){
+            for(int i=0;i<size;++i){
+              for(int j=0;j<size;++j ){
                 array[i][j]=in.nextInt();
             }
 
