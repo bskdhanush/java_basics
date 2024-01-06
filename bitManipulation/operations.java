@@ -17,11 +17,27 @@ public class operations {
         int bitManipulator=1<<position;
         System.out.println("after clearing i'th bit: " +(number & (~bitManipulator)));
     }
+
+    public static void clearLastIbits(int number,int position){
+         int bitMask= ~0<<position;
+         System.out.println("after clearing n bits: " +(number & (bitMask)));
+
+    }
+    public static void clearRangeOfBits(int number, int lp,int rp){
+        lp=(1<<lp)-1;
+        rp= (~0)<<(rp+1);
+         System.out.println("after clearing n range bits: " + (number &(lp|rp)));
+
+    }
+
+
     public static void main(String[] args) {
-        int number=10;
-        int position=1;
-        get(number,position);
-        set(number,position);
-        clear(number,position);
+        int number=15;
+        int position=2;
+        //get(number,position);
+        //set(number,position);
+        //clear(number,position);
+        //clearLastIbits(number,position);
+        clearRangeOfBits(10,2,4);
     }
 }
