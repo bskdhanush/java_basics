@@ -30,14 +30,26 @@ public class operations {
 
     }
 
+    public static void countSetBits(int  number){
+        int count =0;
+        while (number>0) {
+            if((number&1) !=0){
+                count++;
+            }
+            number=number>>1;
+        }
+        System.out.println(count);
+    }
+
 
     public static void main(String[] args) {
-        int number=15;
+        int number=10;
         int position=2;
         //get(number,position);
         //set(number,position);
         //clear(number,position);
         //clearLastIbits(number,position);
-        clearRangeOfBits(10,2,4);
+        //clearRangeOfBits(10,2,4);
+        countSetBits(number);
     }
 }
