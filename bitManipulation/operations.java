@@ -40,7 +40,17 @@ public class operations {
         }
         System.out.println(count);
     }
+    
+    public static void fastExpo(int a/*exponent*/,int n/*power */){
+        int ans=1;
+        while (n>0) {
+            if( (n&1)!=0) ans=ans*a;
+            a=a*a;
+            n=n>>1;
+        }
+        System .out.println(ans);
 
+    }
 
     public static void main(String[] args) {
         int number=10;
@@ -50,6 +60,7 @@ public class operations {
         //clear(number,position);
         //clearLastIbits(number,position);
         //clearRangeOfBits(10,2,4);
-        countSetBits(number);
+        //countSetBits(number);
+        fastExpo(5, 3);
     }
 }
